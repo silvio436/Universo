@@ -56,7 +56,6 @@
             text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
         }
 
-        /* Destaque CDN/OTT */
         .highlight-box {
             background: linear-gradient(45deg, var(--purple-neon), #4b0082);
             padding: 2rem;
@@ -73,7 +72,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Diferenciais Grid */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -100,47 +98,41 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Seção Plano Revendedor (Baseado na Imagem) */
         .info-revenda {
             background: rgba(138, 43, 226, 0.15);
             border: 1px solid var(--purple-neon);
             padding: 2.5rem;
             border-radius: 20px;
             margin-bottom: 4rem;
+            text-align: center;
         }
 
         .info-revenda h3 {
             color: var(--gold-neon);
             font-size: 1.8rem;
-            text-align: center;
             margin-bottom: 1.5rem;
         }
 
         .info-revenda ul {
             list-style: none;
-            columns: 2;
-            column-gap: 2rem;
-        }
-
-        .info-revenda ul li {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: left;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
         .info-revenda ul li::before {
             content: '✦';
             color: var(--gold-neon);
             margin-right: 10px;
-            font-weight: bold;
         }
 
-        /* Planos de Créditos */
         .grid-planos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            margin-bottom: 4rem;
         }
 
         .card-plano {
@@ -159,7 +151,7 @@
         }
 
         .price {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--gold-neon);
             margin: 1rem 0;
             font-weight: 800;
@@ -178,20 +170,53 @@
             transition: 0.3s;
         }
 
-        .btn-whatsapp:hover {
-            background: #128c7e;
-            box-shadow: 0 0 15px #25d366;
+        .btn-revenda-topo {
+            background: var(--gold-neon);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
         }
 
-        .footer {
-            text-align: center;
-            padding: 4rem 1rem;
-            opacity: 0.6;
+        /* FAQ */
+        .faq-section { margin-top: 4rem; }
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .faq-question {
+            padding: 15px;
+            cursor: pointer;
+            background: rgba(138, 43, 226, 0.1);
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
         }
 
-        @media (max-width: 768px) {
-            .info-revenda ul { columns: 1; }
+        /* Imagens Final */
+        .dispositivos-img {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 4rem;
+            padding: 20px;
         }
+        .dispositivos-img img {
+            max-width: 300px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+        }
+
+        .footer { text-align: center; padding: 4rem 1rem; opacity: 0.6; }
+
+        @media (max-width: 768px) { .info-revenda ul { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -205,30 +230,14 @@
 
         <div class="highlight-box">
             <h1>⭐ DIFERENCIAL: SISTEMA COM CDN E OTT</h1>
-            <p>Tecnologia exclusiva de alta estabilidade para você não se preocupar com travamentos.</p>
+            <p>Tecnologia exclusiva de alta estabilidade.</p>
         </div>
 
         <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-shield-alt"></i>
-                <h4>PROTEÇÃO</h4>
-                <p>Tecnologia anti-travamento de última geração.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-headset"></i>
-                <h4>SUPORTE</h4>
-                <p>Atendimento especializado 24h por dia.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-wallet"></i>
-                <h4>PAGAMENTO</h4>
-                <p>Pagamento facilitado para sua revenda.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-server"></i>
-                <h4>SERVIDORES</h4>
-                <p>Infraestrutura líder para máxima estabilidade.</p>
-            </div>
+            <div class="feature-card"><i class="fas fa-shield-alt"></i><h4>PROTEÇÃO</h4><p>Tecnologia anti-travamento.</p></div>
+            <div class="feature-card"><i class="fas fa-headset"></i><h4>SUPORTE</h4><p>Atendimento 24h.</p></div>
+            <div class="feature-card"><i class="fas fa-wallet"></i><h4>PAGAMENTO</h4><p>Pagamento facilitado.</p></div>
+            <div class="feature-card"><i class="fas fa-server"></i><h4>SERVIDORES</h4><p>Máxima estabilidade.</p></div>
         </div>
 
         <div class="info-revenda">
@@ -244,62 +253,44 @@
                 <li>Crie seus próprios revendedores</li>
                 <li>Testes Ilimitados para clientes</li>
             </ul>
-            <p style="text-align: center; margin-top: 2rem; color: var(--gold-neon); font-weight: bold;">
-                * Acima de 1000 créditos, valor sob consulta!
-            </p>
+            <a href="https://wa.me/SEUNUMERO" class="btn-revenda-topo">QUERO SER UM REVENDEDOR</a>
         </div>
 
         <h2><i class="fas fa-coins"></i> Planos de Revenda Pré-Pago</h2>
-        
         <div class="grid-planos">
-            <div class="card-plano">
-                <h3>INICIANTE</h3>
-                <p>10 Créditos</p>
-                <div class="price">R$ 80</div>
-                <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Começar Agora</a>
-            </div>
+            <div class="card-plano"><h3>10 CRÉDITOS</h3><div class="price">R$ 80</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Comprar Créditos</a></div>
+            <div class="card-plano"><h3>30 CRÉDITOS</h3><div class="price">R$ 210</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Comprar Créditos</a></div>
+            <div class="card-plano" style="border-color: var(--gold-neon);"><h3>50 CRÉDITOS</h3><div class="price">R$ 300</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Mais Vendido</a></div>
+            <div class="card-plano"><h3>100 CRÉDITOS</h3><div class="price">R$ 500</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Melhor Custo</a></div>
+            <div class="card-plano"><h3>300 CRÉDITOS</h3><div class="price">R$ 1.200</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Alta Escala</a></div>
+            <div class="card-plano"><h3>500 CRÉDITOS</h3><div class="price">R$ 1.500</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Preço de Custo</a></div>
+        </div>
 
-            <div class="card-plano">
-                <h3>EMPREENDEDOR</h3>
-                <p>30 Créditos</p>
-                <div class="price">R$ 210</div>
-                <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Começar Agora</a>
-            </div>
+        <h2><i class="fas fa-user"></i> Planos para Clientes Finais</h2>
+        <div class="grid-planos">
+            <div class="card-plano"><h3>MENSAL</h3><div class="price">R$ 35,00</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Assinar Agora</a></div>
+            <div class="card-plano"><h3>TRIMESTRAL</h3><div class="price">R$ 89,99</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Assinar Agora</a></div>
+            <div class="card-plano"><h3>SEMESTRAL</h3><div class="price">R$ 149,99</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Assinar Agora</a></div>
+            <div class="card-plano" style="border-color: var(--gold-neon);"><h3>ANUAL</h3><div class="price">R$ 199,99</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Melhor Oferta</a></div>
+        </div>
 
-            <div class="card-plano" style="border: 2px solid var(--gold-neon);">
-                <h3>BUSINESS</h3>
-                <p>50 Créditos</p>
-                <div class="price">R$ 300</div>
-                <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">O Mais Procurado</a>
-            </div>
+        <div class="faq-section">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="faq-item"><div class="faq-question">Como funciona a revenda?<span>+</span></div></div>
+            <div class="faq-item"><div class="faq-question">Preciso de internet de quantos megas?<span>+</span></div></div>
+            <div class="faq-item"><div class="faq-question">Quais dispositivos são compatíveis?<span>+</span></div></div>
+            <div class="faq-item"><div class="faq-question">Como recebo meus créditos?<span>+</span></div></div>
+        </div>
 
-            <div class="card-plano">
-                <h3>PREMIUM</h3>
-                <p>100 Créditos</p>
-                <div class="price">R$ 500</div>
-                <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Melhor Custo</a>
-            </div>
-
-            <div class="card-plano">
-                <h3>MASTER</h3>
-                <p>300 Créditos</p>
-                <div class="price">R$ 1.200</div>
-                <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Alta Escala</a>
-            </div>
-
-            <div class="card-plano">
-                <h3>GALAXY</h3>
-                <p>500 Créditos</p>
-                <div class="price">R$ 1.500</div>
-                <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Preço de Custo</a>
-            </div>
+        <div class="dispositivos-img">
+            <img src="https://static.wixstatic.com/media/2313af_3bd052ccff254bbe8bf94e7566f288df~mv2.png" alt="Multi Dispositivos">
+            <img src="https://static.wixstatic.com/media/2313af_cd28e244e54448319b4869dae15fbe73~mv2.webp" alt="App Mobile">
+            <img src="https://static.wixstatic.com/media/2313af_1b386625f5bd4c5196631f1398815408~mv2.png" alt="Smart TV">
         </div>
 
     </div>
 
-    <div class="footer">
-        <p>&copy; 2026 Universo do Entretenimento - Tecnologia CDN/OTT</p>
-    </div>
+    <div class="footer"><p>&copy; 2026 Universo do Entretenimento - Alta Estabilidade</p></div>
 
 </body>
 </html>
