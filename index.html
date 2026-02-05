@@ -30,17 +30,17 @@
             box-shadow: 0 0 30px rgba(138, 43, 226, 0.3);
         }
 
-        .logo { max-width: 280px; filter: drop-shadow(0 0 15px var(--purple-neon)); margin-bottom: 1rem; }
+        .logo { max-width: 250px; width: 100%; filter: drop-shadow(0 0 15px var(--purple-neon)); margin-bottom: 1rem; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
 
-        h2 { text-align: center; color: var(--gold-neon); text-transform: uppercase; margin: 3rem 0 2rem; font-size: 2rem; text-shadow: 0 0 10px rgba(255, 204, 0, 0.5); }
+        h2 { text-align: center; color: var(--gold-neon); text-transform: uppercase; margin: 3rem 0 1.5rem; font-size: 1.8rem; text-shadow: 0 0 10px rgba(255, 204, 0, 0.5); }
 
         .tech-info {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            margin: 4rem 0;
+            margin: 2rem 0;
         }
 
         .tech-card {
@@ -55,15 +55,15 @@
 
         .highlight-box {
             background: linear-gradient(45deg, var(--purple-neon), #4b0082);
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 15px;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             border: 2px solid var(--gold-neon);
             box-shadow: 0 0 20px var(--purple-neon);
         }
 
-        .grid-planos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .grid-planos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
 
         .card-plano {
             background: var(--card-bg);
@@ -74,106 +74,124 @@
             transition: 0.4s;
         }
 
-        .card-plano:hover { border-color: var(--gold-neon); box-shadow: 0 0 25px var(--purple-neon); transform: scale(1.03); }
+        .card-plano:hover { border-color: var(--gold-neon); box-shadow: 0 0 25px var(--purple-neon); transform: scale(1.02); }
 
-        .price { font-size: 2.5rem; color: var(--gold-neon); margin: 1rem 0; font-weight: 800; }
+        .price { font-size: 2.2rem; color: var(--gold-neon); margin: 0.8rem 0; font-weight: 800; }
 
         .btn-whatsapp {
-            background: #25d366; color: white; padding: 1.2rem; display: block; border-radius: 10px;
-            text-decoration: none; font-weight: bold; text-transform: uppercase; margin-top: 1.5rem; transition: 0.3s;
+            background: #25d366; color: white; padding: 1rem; display: block; border-radius: 10px;
+            text-decoration: none; font-weight: bold; text-transform: uppercase; margin-top: 1.2rem; transition: 0.3s;
+            text-align: center;
         }
 
-        /* Tabela de Preços Revenda Sem Valores Fixos */
+        /* Seção Revenda Ajustada */
         .revenda-promo {
-            background: linear-gradient(rgba(138, 43, 226, 0.1), rgba(0,0,0,0.8));
+            background: linear-gradient(rgba(138, 43, 226, 0.15), rgba(0,0,0,0.9));
             border: 1px solid var(--gold-neon);
-            padding: 30px;
+            padding: 2rem;
             border-radius: 20px;
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
-        .revenda-promo h3 { color: var(--gold-neon); font-size: 1.8rem; margin-bottom: 15px; }
-        .revenda-promo p { font-size: 1.2rem; margin-bottom: 20px; color: #eee; }
-        .badge-gold { background: var(--gold-neon); color: black; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 1.4rem; }
+        .revenda-promo h3 { color: var(--gold-neon); font-size: 1.6rem; margin-bottom: 1rem; }
+        .revenda-promo p { margin-bottom: 1rem; color: #eee; font-size: 1.1rem; }
+        .badge-promo { background: var(--gold-neon); color: black; padding: 10px 20px; border-radius: 10px; font-weight: 900; display: inline-block; margin: 10px 0; font-size: 1.1rem; }
 
-        .faq-section { margin-top: 4rem; margin-bottom: 4rem; }
+        .vantagens-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: left;
+            gap: 10px;
+            padding: 20px 0;
+        }
+
+        .vantagens-list li::before { content: '✦'; color: var(--gold-neon); margin-right: 8px; }
+
+        /* FAQ */
+        .faq-section { margin-top: 3rem; }
         .faq-item { background: var(--card-bg); margin-bottom: 10px; border-radius: 10px; border: 1px solid #333; }
         .faq-question {
-            padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+            padding: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
             font-weight: bold; color: var(--gold-neon);
         }
         .faq-answer {
             max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
-            background: rgba(255,255,255,0.05); padding: 0 20px; color: #ccc;
+            background: rgba(255,255,255,0.05); padding: 0 15px; color: #ccc;
         }
-        .faq-item.active .faq-answer { max-height: 300px; padding: 20px; }
+        .faq-item.active .faq-answer { max-height: 300px; padding: 15px; }
 
-        .dispositivos-img { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 4rem 0; }
-        .dispositivos-img img { max-width: 280px; height: auto; }
+        /* Responsividade Celular */
+        @media (max-width: 768px) {
+            .tech-info { grid-template-columns: 1fr; }
+            .vantagens-list { grid-template-columns: 1fr; }
+            h2 { font-size: 1.5rem; }
+            .revenda-promo h3 { font-size: 1.4rem; }
+            .logo { max-width: 200px; }
+        }
 
-        .footer { text-align: center; padding: 4rem 1rem; opacity: 0.6; border-top: 1px solid #222; }
-
-        @media (max-width: 768px) { .tech-info { grid-template-columns: 1fr; } }
+        .dispositivos-img { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 3rem 0; }
+        .dispositivos-img img { max-width: 100%; width: 260px; height: auto; }
+        .footer { text-align: center; padding: 3rem 1rem; opacity: 0.6; border-top: 1px solid #222; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <header>
         <img src="https://i.imgur.com/IWgY56W.png" alt="Universo do Entretenimento" class="logo">
-        <p>Liderança e Estabilidade no Universo Digital</p>
+        <p>A maior estabilidade no Universo Digital</p>
     </header>
 
     <div class="container">
 
         <div class="highlight-box">
-            <h1>⭐ DIFERENCIAL: SISTEMA COM CDN E OTT</h1>
-            <p>Tecnologia exclusiva de alta estabilidade para sua diversão.</p>
+            <h1>⭐ SISTEMA COM CDN E OTT</h1>
+            <p>Alta performance e estabilidade exclusiva para Android.</p>
         </div>
 
-        <div class="card-plano" style="margin-bottom: 4rem; text-align: left;">
-            <h3 style="color: var(--gold-neon); text-align: center; margin-bottom: 20px;">PLANO REVENDEDOR - VANTAGENS</h3>
-            <ul style="list-style: none; columns: 2; padding: 20px;">
-                <li>✦ Canais em Alta Definição + OTT</li>
-                <li>✦ Banners de programação exclusivos</li>
-                <li>✦ DNS para Smart TV</li>
-                <li>✦ Suporte com tutoriais e vídeos</li>
-                <li>✦ Materiais de divulgação prontos</li>
-                <li>✦ Créditos acumulativos</li>
-                <li>✦ Crie seus próprios assinantes</li>
-                <li>✦ Crie seus próprios revendedores</li>
-                <li>✦ Testes Ilimitados</li>
+        <div class="card-plano" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--gold-neon); margin-bottom: 10px;">VANTAGENS DE SER REVENDEDOR</h3>
+            <ul class="vantagens-list">
+                <li>Canais em HD/4K + OTT</li>
+                <li>Créditos acumulativos</li>
+                <li>Painel Administrativo</li>
+                <li>Crie seus Revendedores</li>
+                <li>DNS para Smart TV</li>
+                <li>Testes Ilimitados</li>
+                <li>Suporte e Materiais</li>
+                <li>Sistema Anti-Travamento</li>
             </ul>
         </div>
 
         <div class="revenda-promo">
-            <h3>INVISTA NO SEU PRÓPRIO NEGÓCIO</h3>
-            <p>Trabalhamos com um sistema de escala inteligente: <strong>Quanto maior o seu volume de créditos, menor o seu custo unitário.</strong></p>
-            <div style="margin: 25px 0;">
-                <span class="badge-gold">Créditos a partir de R$ 8,00 a unidade</span>
+            <h3>LUCRO MÁXIMO E INVESTIMENTO BAIXO</h3>
+            <p>Trabalhamos com preços agressivos para você ganhar no volume!</p>
+            <div class="badge-promo">
+                PLANO INICIAL: 10 CRÉDITOS POR R$ 8,00/unid
             </div>
-            <p>Pacotes liberados a partir de 10 créditos com ativação imediata no painel.</p>
-            <p style="font-style: italic; color: var(--gold-neon);">Consulte nossa tabela de descontos progressivos para grandes volumes (acima de 100 créditos).</p>
-            <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp" style="display: inline-block; padding: 15px 50px; background: var(--gold-neon); color: black;">SOLICITAR TABELA DE PREÇOS</a>
+            <p>🚀 <strong>OPORTUNIDADE:</strong> Adquirindo em maiores quantidades, sua unidade pode chegar a custar apenas <strong>R$ 2,00</strong>!</p>
+            <p>Ativação imediata e suporte para você começar hoje mesmo.</p>
+            <a href="https://wa.me/5519981316342?text=Olá! Gostaria de receber a tabela de preços progressivos para revenda." class="btn-whatsapp" style="background: var(--gold-neon); color: black;">SOLICITAR TABELA COMPLETA</a>
         </div>
 
         <div class="tech-info">
             <div class="tech-card">
                 <h3>O que é OTT?</h3>
-                <p>O Sistema de OTT é voltado ao público que usa TVBOX ou qualquer sistema ANDROID. Isso garante uma qualidade e estabilidade superior, pois é um sistema otimizado exclusivamente para Android. Aplicativo próprio e exclusivo com sistema anti-travamento e delay baixo.</p>
+                <p>Sistema otimizado para TVBOX e ANDROID. Garante estabilidade superior e delay baixo, perfeito para quem busca qualidade máxima sem travamentos.</p>
             </div>
             <div class="tech-card">
-                <h3>TV via Internet</h3>
-                <p>É uma tecnologia que permite a transmissão de sinais de televisão pela rede mundial de computadores, sem a necessidade de antenas ou cabos. Oferece economia, acesso em qualquer lugar, interatividade e alta qualidade de imagem e som.</p>
+                <h3>Transmissão Digital</h3>
+                <p>Tecnologia que utiliza sua internet para entregar imagem e som de alta definição. Sem cabos, sem antenas, com acesso em qualquer lugar.</p>
             </div>
         </div>
 
-        <h2>Planos para Clientes Finais</h2>
+        <h2>Planos para Clientes</h2>
         <div class="grid-planos">
-            <div class="card-plano"><h3>MENSAL</h3><div class="price">R$ 35,00</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Assinar Agora</a></div>
-            <div class="card-plano"><h3>TRIMESTRAL</h3><div class="price">R$ 89,99</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Assinar Agora</a></div>
-            <div class="card-plano"><h3>SEMESTRAL</h3><div class="price">R$ 149,99</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Assinar Agora</a></div>
-            <div class="card-plano" style="border-color: var(--gold-neon);"><h3>ANUAL</h3><div class="price">R$ 199,99</div><a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Melhor Oferta</a></div>
+            <div class="card-plano"><h3>MENSAL</h3><div class="price">R$ 35,00</div><a href="https://wa.me/5519981316342?text=Quero o plano Mensal" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano"><h3>TRIMESTRAL</h3><div class="price">R$ 89,99</div><a href="https://wa.me/5519981316342?text=Quero o plano Trimestral" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano"><h3>SEMESTRAL</h3><div class="price">R$ 149,99</div><a href="https://wa.me/5519981316342?text=Quero o plano Semestral" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano" style="border-color: var(--gold-neon);"><h3>ANUAL</h3><div class="price">R$ 199,99</div><a href="https://wa.me/5519981316342?text=Quero o plano Anual" class="btn-whatsapp">Melhor Oferta</a></div>
         </div>
 
         <div class="dispositivos-img">
@@ -182,33 +200,25 @@
             <img src="https://static.wixstatic.com/media/2313af_1b386625f5bd4c5196631f1398815408~mv2.png" alt="Smart TV">
         </div>
 
-        <div class="faq-section" id="faq">
+        <div class="faq-section">
             <h2>Dúvidas Frequentes</h2>
-            
             <div class="faq-item">
                 <div class="faq-question">Como funciona a revenda? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Você compra créditos antecipados e revende para seus clientes. Cada crédito equivale a 30 dias de acesso para um cliente. Você tem total controle pelo painel administrativo.</div>
+                <div class="faq-answer">Você adquire créditos e gerencia seus próprios clientes através de um painel exclusivo. Cada crédito ativa um cliente por 30 dias.</div>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">Preciso de internet de quantos megas? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Recomendamos uma conexão mínima de 10MB para conteúdos estáveis. Para conteúdos em 4K, o ideal é acima de 25MB.</div>
+                <div class="faq-question">Quais as formas de pagamento? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Aceitamos Pix, cartão de crédito e boleto para facilitar a reposição dos seus créditos.</div>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">Como recebo meus créditos? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Imediatamente após a confirmação do pagamento, os créditos são adicionados ao seu painel para você já começar a criar seus clientes.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">O sistema roda em Smart TV? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Sim! Compatível com Samsung, LG e qualquer TV ou dispositivo com sistema Android, garantindo versatilidade para seus clientes.</div>
+                <div class="faq-question">O sistema funciona em qualquer Smart TV? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Sim! Compatível com Samsung, LG e dispositivos Android (TV Box, Celular, etc).</div>
             </div>
         </div>
 
     </div>
 
-    <div class="footer"><p>&copy; 2026 Universo do Entretenimento - Tecnologia de Ponta</p></div>
+    <div class="footer"><p>&copy; 2026 Universo do Entretenimento - Alta Estabilidade</p></div>
 
     <script>
         document.querySelectorAll('.faq-question').forEach(item => {
