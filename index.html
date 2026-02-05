@@ -80,6 +80,7 @@
         .tech-card { background: var(--card-bg); padding: 25px; border-radius: 15px; border: 1px solid var(--purple-neon); }
         .tech-card h3 { color: var(--gold-neon); margin-bottom: 10px; border-bottom: 1px solid #333; }
 
+        /* MODO DESKTOP: Mantém as imagens em colunas (lado a lado) */
         .mural-fotos { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
@@ -106,9 +107,15 @@
 
         .footer { text-align: center; padding: 3rem 1rem; opacity: 0.6; border-top: 1px solid #222; clear: both; }
 
+        /* MODO MOBILE: Só entra em ação em telas menores que 768px */
         @media (max-width: 768px) { 
             .tech-info { grid-template-columns: 1fr; } 
-            .mural-fotos { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            
+            /* Imagens uma embaixo da outra apenas no celular */
+            .mural-fotos { 
+                grid-template-columns: 1fr !important; 
+                gap: 15px; 
+            }
         }
     </style>
 </head>
@@ -135,29 +142,19 @@
             <a href="https://wa.me/5519981316342" class="btn-whatsapp" style="background: var(--gold-neon); color: black;">SOLICITAR TABELA DE PREÇOS</a>
         </div>
 
-        <div class="tech-info">
-            <div class="tech-card">
-                <h3>O que é OTT?</h3>
-                <p>O Sistema de OTT é voltado ao público que usa TVBOX ou qualquer sistema ANDROID. Isso garante uma qualidade e estabilidade superior, pois é um sistema otimizado exclusivamente para Android. Aplicativo próprio e exclusivo com sistema anti-travamento e delay baixo.</p>
+        <div class="tech-card" style="margin-bottom: 3rem;">
+            <h3 style="text-align:center; color: var(--gold-neon);">PLANO REVENDEDOR - VANTAGENS</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 20px;">
+                <p>✦ Canais em Alta Definição + OTT</p>
+                <p>✦ Créditos acumulativos</p>
+                <p>✦ Banners de programação exclusivos</p>
+                <p>✦ Crie seus próprios assinantes</p>
+                <p>✦ DNS para Smart TV</p>
+                <p>✦ Crie seus próprios revendedores</p>
+                <p>✦ Suporte com tutoriais e vídeos</p>
+                <p>✦ Testes Ilimitados</p>
+                <p>✦ Materiais de divulgação</p>
             </div>
-            <div class="tech-card">
-                <h3>TV via Internet</h3>
-                <p>É uma tecnologia que permite a transmissão de sinais pela rede mundial de computadores, sem a necessidade de antenas ou cabos. Oferece economia, interatividade e alta qualidade de imagem mesmo em conexões básicas.</p>
-            </div>
-        </div>
-
-        <h2>Planos para Clientes</h2>
-        <div class="grid-planos">
-            <div class="card-plano"><h3>MENSAL</h3><div class="price">R$ 35,00</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
-            <div class="card-plano"><h3>TRIMESTRAL</h3><div class="price">R$ 89,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
-            <div class="card-plano"><h3>SEMESTRAL</h3><div class="price">R$ 149,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
-            <div class="card-plano" style="border-color: var(--gold-neon);"><h3>ANUAL</h3><div class="price">R$ 199,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Melhor Oferta</a></div>
-        </div>
-
-        <div class="mural-fotos">
-            <img src="https://static.wixstatic.com/media/2313af_3bd052ccff254bbe8bf94e7566f288df~mv2.png" alt="Multi Dispositivos">
-            <img src="https://static.wixstatic.com/media/2313af_cd28e244e54448319b4869dae15fbe73~mv2.webp" alt="App Mobile">
-            <img src="https://static.wixstatic.com/media/2313af_1b386625f5bd4c5196631f1398815408~mv2.png" alt="Smart TV">
         </div>
 
         <h2>Aplicativos Parceiros</h2>
@@ -174,35 +171,12 @@
             <img src="https://imgur.com/Ol3MwzB.png" alt="App Oficial 2">
         </div>
 
-        <h2>Dúvidas Frequentes</h2>
-        <div class="faq-section">
-            <div class="faq-item">
-                <div class="faq-question">Como funciona a revenda? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Você adquire créditos antecipados e revende para seus clientes. Cada crédito equivale a 30 dias de acesso. Você tem total controle através do painel.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Preciso de internet de quantos megas? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Recomendamos 10MB para conteúdos em HD e 25MB para conteúdos em 4K estáveis.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">O sistema roda em Smart TV? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Sim! Compatível com Samsung, LG e qualquer TV ou dispositivo Android (TV Box, Mi Stick, Celulares).</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Como recebo meus créditos? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Após o pagamento via Pix, os créditos são inseridos no seu painel administrativo imediatamente.</div>
-            </div>
-        </div>
-
         <div class="sobre-nos">
             <h2>Sobre o Universo do Entretenimento</h2>
-            <p>Nascemos com a missão de transformar a forma como você consome conteúdo digital. Somos especialistas em infraestrutura de alta performance, utilizando servidores com tecnologia CDN e sistemas OTT para garantir que a sua diversão nunca seja interrompida.</p>
-            <p>Mais do que um serviço, oferecemos uma oportunidade de negócio sólida para nossos parceiros revendedores, com suporte dedicado e a melhor margem de lucro.</p>
+            <p>Nascemos com a missão de transformar a forma como você consome conteúdo digital. Utilizamos servidores com tecnologia CDN e sistemas OTT para garantir que a sua diversão nunca seja interrompida.</p>
         </div>
 
     </div>
-
-    <div class="footer"><p>&copy; 2026 Universo do Entretenimento - Qualidade Premium</p></div>
 
     <script>
         document.querySelectorAll('.faq-question').forEach(item => {
