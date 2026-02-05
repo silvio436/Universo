@@ -76,23 +76,20 @@
             text-align: center;
         }
 
-        /* Explicações Técnicas Recuadas */
         .tech-info { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 3rem 0; }
         .tech-card { background: var(--card-bg); padding: 25px; border-radius: 15px; border: 1px solid var(--purple-neon); }
         .tech-card h3 { color: var(--gold-neon); margin-bottom: 10px; border-bottom: 1px solid #333; }
 
-        /* Sobre Nós */
         .sobre-nos { background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 2.5rem; margin: 3rem 0; border-left: 5px solid var(--purple-neon); text-align: center; }
 
-        /* FAQ */
         .faq-item { background: var(--card-bg); margin-bottom: 10px; border-radius: 10px; border: 1px solid #333; }
         .faq-question { padding: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: var(--gold-neon); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(255,255,255,0.05); padding: 0 15px; color: #ccc; }
         .faq-item.active .faq-answer { max-height: 300px; padding: 15px; }
 
-        /* Imagens */
-        .mural-fotos { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 3rem 0; }
-        .mural-fotos img { width: 280px; height: auto; border-radius: 10px; border: 1px solid var(--purple-neon); }
+        .mural-fotos { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 2rem 0; }
+        .mural-fotos img { width: 280px; height: auto; border-radius: 10px; border: 1px solid var(--purple-neon); transition: 0.3s; }
+        .mural-fotos img:hover { border-color: var(--gold-neon); transform: scale(1.05); }
 
         .footer { text-align: center; padding: 3rem 1rem; opacity: 0.6; border-top: 1px solid #222; }
 
@@ -118,7 +115,7 @@
             <p>Trabalhamos com preços agressivos para você ganhar no volume!</p>
             <div class="badge-promo">PLANO INICIAL: 10 CRÉDITOS POR R$ 8,00/unid</div>
             <p>🚀 <strong>OPORTUNIDADE:</strong> Adquirindo em maiores quantidades, sua unidade pode chegar a custar apenas <strong>R$ 2,00</strong>!</p>
-            <a href="https://wa.me/5519981316342?text=Gostaria de receber a tabela de revenda." class="btn-whatsapp" style="background: var(--gold-neon); color: black;">SOLICITAR TABELA COMPLETA</a>
+            <a href="https://wa.me/5519981316342?text=Olá! Gostaria de receber a tabela de revenda." class="btn-whatsapp" style="background: var(--gold-neon); color: black;">SOLICITAR TABELA COMPLETA</a>
         </div>
 
         <div class="tech-info">
@@ -132,6 +129,13 @@
             </div>
         </div>
 
+        <h2>Nossos Aplicativos Oficiais</h2>
+        <div class="mural-fotos">
+            <img src="https://imgur.com/PKlXxZG.png" alt="App 1">
+            <img src="https://imgur.com/Ol3MwzB.png" alt="App 2">
+            <img src="https://static.wixstatic.com/media/2313af_3bd052ccff254bbe8bf94e7566f288df~mv2.png" alt="Dispositivos">
+        </div>
+
         <h2>Planos para Clientes</h2>
         <div class="grid-planos">
             <div class="card-plano"><h3>MENSAL</h3><div class="price">R$ 35,00</div><a href="https://wa.me/5519981316342?text=Quero o plano Mensal" class="btn-whatsapp">Assinar</a></div>
@@ -140,28 +144,30 @@
             <div class="card-plano" style="border-color: var(--gold-neon);"><h3>ANUAL</h3><div class="price">R$ 199,99</div><a href="https://wa.me/5519981316342?text=Quero o plano Anual" class="btn-whatsapp">Melhor Oferta</a></div>
         </div>
 
-        <div class="mural-fotos">
-            <img src="https://static.wixstatic.com/media/2313af_3bd052ccff254bbe8bf94e7566f288df~mv2.png" alt="Img 1">
-            <img src="https://static.wixstatic.com/media/2313af_cd28e244e54448319b4869dae15fbe73~mv2.webp" alt="Img 2">
-            <img src="https://static.wixstatic.com/media/2313af_1b386625f5bd4c5196631f1398815408~mv2.png" alt="Img 3">
-        </div>
-
         <h2>Dúvidas Frequentes</h2>
         <div class="faq-section">
             <div class="faq-item">
                 <div class="faq-question">Como funciona a revenda? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Você adquire créditos e gerencia seus próprios clientes através de um painel exclusivo. Cada crédito ativa um cliente por 30 dias.</div>
+                <div class="faq-answer">Você adquire créditos e gerencia seus próprios clientes através de um painel exclusivo. Cada crédito ativa um cliente por 30 dias. Você tem total controle e autonomia.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Preciso de internet de quantos megas? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Recomendamos uma conexão mínima de 10MB para conteúdos estáveis. Para conteúdos em 4K, o ideal é acima de 25MB de velocidade constante.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">O sistema roda em Smart TV? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Sim! Compatível com Samsung, LG e dispositivos Android (TV Box, Mi Stick, Celular, etc).</div>
+                <div class="faq-answer">Sim! Totalmente compatível com Samsung, LG e qualquer dispositivo com sistema Android (TV Box, Mi Stick, Celulares e Tablets).</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Como recebo meus créditos? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Imediatamente após a confirmação do pagamento via Pix, os créditos são adicionados ao seu painel administrativo para uso instantâneo.</div>
             </div>
         </div>
 
         <div class="sobre-nos">
             <h2>Sobre o Universo do Entretenimento</h2>
             <p>Nascemos com a missão de transformar a forma como você consome conteúdo digital. Somos especialistas em infraestrutura de alta performance, utilizando servidores com tecnologia CDN e sistemas OTT para garantir que a sua diversão nunca seja interrompida.</p>
-            <p>Mais do que um serviço, oferecemos uma oportunidade de negócio sólida para nossos parceiros revendedores, com suporte dedicado e a melhor margem de lucro.</p>
+            <p>Mais do que um serviço, oferecemos uma oportunidade de negócio sólida para nossos parceiros revendedores, com suporte dedicado e a melhor margem de lucro do mercado.</p>
         </div>
 
     </div>
