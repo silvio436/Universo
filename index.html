@@ -80,16 +80,15 @@
         .tech-card { background: var(--card-bg); padding: 25px; border-radius: 15px; border: 1px solid var(--purple-neon); }
         .tech-card h3 { color: var(--gold-neon); margin-bottom: 10px; border-bottom: 1px solid #333; }
 
-        .sobre-nos { background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 2.5rem; margin: 3rem 0; border-left: 5px solid var(--purple-neon); text-align: center; }
-
         .faq-item { background: var(--card-bg); margin-bottom: 10px; border-radius: 10px; border: 1px solid #333; }
         .faq-question { padding: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: var(--gold-neon); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(255,255,255,0.05); padding: 0 15px; color: #ccc; }
-        .faq-item.active .faq-answer { max-height: 300px; padding: 15px; }
+        .faq-item.active .faq-answer { max-height: 350px; padding: 15px; }
 
         .mural-fotos { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 2rem 0; }
-        .mural-fotos img { width: 280px; height: auto; border-radius: 10px; border: 1px solid var(--purple-neon); transition: 0.3s; }
-        .mural-fotos img:hover { border-color: var(--gold-neon); transform: scale(1.05); }
+        .mural-fotos img { width: 280px; height: auto; border-radius: 10px; border: 1px solid var(--purple-neon); }
+
+        .sobre-nos { background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 2.5rem; margin: 3rem 0; border-left: 5px solid var(--purple-neon); text-align: center; }
 
         .footer { text-align: center; padding: 3rem 1rem; opacity: 0.6; border-top: 1px solid #222; }
 
@@ -115,7 +114,7 @@
             <p>Trabalhamos com preços agressivos para você ganhar no volume!</p>
             <div class="badge-promo">PLANO INICIAL: 10 CRÉDITOS POR R$ 8,00/unid</div>
             <p>🚀 <strong>OPORTUNIDADE:</strong> Adquirindo em maiores quantidades, sua unidade pode chegar a custar apenas <strong>R$ 2,00</strong>!</p>
-            <a href="https://wa.me/5519981316342?text=Olá! Gostaria de receber a tabela de revenda." class="btn-whatsapp" style="background: var(--gold-neon); color: black;">SOLICITAR TABELA COMPLETA</a>
+            <a href="https://wa.me/5519981316342" class="btn-whatsapp" style="background: var(--gold-neon); color: black;">SOLICITAR TABELA COMPLETA</a>
         </div>
 
         <div class="tech-info">
@@ -129,45 +128,47 @@
             </div>
         </div>
 
-        <h2>Nossos Aplicativos Oficiais</h2>
-        <div class="mural-fotos">
-            <img src="https://imgur.com/PKlXxZG.png" alt="App 1">
-            <img src="https://imgur.com/Ol3MwzB.png" alt="App 2">
-            <img src="https://static.wixstatic.com/media/2313af_3bd052ccff254bbe8bf94e7566f288df~mv2.png" alt="Dispositivos">
-        </div>
-
         <h2>Planos para Clientes</h2>
         <div class="grid-planos">
-            <div class="card-plano"><h3>MENSAL</h3><div class="price">R$ 35,00</div><a href="https://wa.me/5519981316342?text=Quero o plano Mensal" class="btn-whatsapp">Assinar</a></div>
-            <div class="card-plano"><h3>TRIMESTRAL</h3><div class="price">R$ 89,99</div><a href="https://wa.me/5519981316342?text=Quero o plano Trimestral" class="btn-whatsapp">Assinar</a></div>
-            <div class="card-plano"><h3>SEMESTRAL</h3><div class="price">R$ 149,99</div><a href="https://wa.me/5519981316342?text=Quero o plano Semestral" class="btn-whatsapp">Assinar</a></div>
-            <div class="card-plano" style="border-color: var(--gold-neon);"><h3>ANUAL</h3><div class="price">R$ 199,99</div><a href="https://wa.me/5519981316342?text=Quero o plano Anual" class="btn-whatsapp">Melhor Oferta</a></div>
+            <div class="card-plano"><h3>MENSAL</h3><div class="price">R$ 35,00</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano"><h3>TRIMESTRAL</h3><div class="price">R$ 89,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano"><h3>SEMESTRAL</h3><div class="price">R$ 149,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano" style="border-color: var(--gold-neon);"><h3>ANUAL</h3><div class="price">R$ 199,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Melhor Oferta</a></div>
+        </div>
+
+        <h2>Dispositivos e Aplicativos</h2>
+        <div class="mural-fotos">
+            <img src="https://static.wixstatic.com/media/2313af_3bd052ccff254bbe8bf94e7566f288df~mv2.png" alt="Multi Dispositivos">
+            <img src="https://static.wixstatic.com/media/2313af_cd28e244e54448319b4869dae15fbe73~mv2.webp" alt="App Mobile">
+            <img src="https://static.wixstatic.com/media/2313af_1b386625f5bd4c5196631f1398815408~mv2.png" alt="Smart TV">
+            <img src="https://imgur.com/PKlXxZG.png" alt="App Oficial 1">
+            <img src="https://imgur.com/Ol3MwzB.png" alt="App Oficial 2">
         </div>
 
         <h2>Dúvidas Frequentes</h2>
         <div class="faq-section">
             <div class="faq-item">
                 <div class="faq-question">Como funciona a revenda? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Você adquire créditos e gerencia seus próprios clientes através de um painel exclusivo. Cada crédito ativa um cliente por 30 dias. Você tem total controle e autonomia.</div>
+                <div class="faq-answer">Você adquire créditos antecipados e revende para seus clientes. Cada crédito equivale a 30 dias de acesso. Você tem total controle através do painel.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Preciso de internet de quantos megas? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Recomendamos uma conexão mínima de 10MB para conteúdos estáveis. Para conteúdos em 4K, o ideal é acima de 25MB de velocidade constante.</div>
+                <div class="faq-answer">Recomendamos 10MB para conteúdos em HD e 25MB para conteúdos em 4K estáveis.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">O sistema roda em Smart TV? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Sim! Totalmente compatível com Samsung, LG e qualquer dispositivo com sistema Android (TV Box, Mi Stick, Celulares e Tablets).</div>
+                <div class="faq-answer">Sim! Compatível com Samsung, LG e qualquer TV ou dispositivo Android (TV Box, Mi Stick, Celulares).</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Como recebo meus créditos? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-answer">Imediatamente após a confirmação do pagamento via Pix, os créditos são adicionados ao seu painel administrativo para uso instantâneo.</div>
+                <div class="faq-answer">Após o pagamento via Pix, os créditos são inseridos no seu painel administrativo imediatamente.</div>
             </div>
         </div>
 
         <div class="sobre-nos">
             <h2>Sobre o Universo do Entretenimento</h2>
             <p>Nascemos com a missão de transformar a forma como você consome conteúdo digital. Somos especialistas em infraestrutura de alta performance, utilizando servidores com tecnologia CDN e sistemas OTT para garantir que a sua diversão nunca seja interrompida.</p>
-            <p>Mais do que um serviço, oferecemos uma oportunidade de negócio sólida para nossos parceiros revendedores, com suporte dedicado e a melhor margem de lucro do mercado.</p>
+            <p>Mais do que um serviço, oferecemos uma oportunidade de negócio sólida para nossos parceiros revendedores, com suporte dedicado e a melhor margem de lucro.</p>
         </div>
 
     </div>
