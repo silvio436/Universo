@@ -80,7 +80,6 @@
         .tech-card { background: var(--card-bg); padding: 25px; border-radius: 15px; border: 1px solid var(--purple-neon); }
         .tech-card h3 { color: var(--gold-neon); margin-bottom: 10px; border-bottom: 1px solid #333; }
 
-        /* MODO DESKTOP: Mantém as imagens em colunas (lado a lado) */
         .mural-fotos { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
@@ -107,11 +106,8 @@
 
         .footer { text-align: center; padding: 3rem 1rem; opacity: 0.6; border-top: 1px solid #222; clear: both; }
 
-        /* MODO MOBILE: Só entra em ação em telas menores que 768px */
         @media (max-width: 768px) { 
             .tech-info { grid-template-columns: 1fr; } 
-            
-            /* Imagens uma embaixo da outra apenas no celular */
             .mural-fotos { 
                 grid-template-columns: 1fr !important; 
                 gap: 15px; 
@@ -135,10 +131,9 @@
 
         <div class="revenda-promo">
             <h3>INVISTA NO SEU PRÓPRIO NEGÓCIO</h3>
-            <p>Trabalhamos com um sistema de escala inteligente: Quanto maior o seu volume de créditos, menor o seu custo unitário.</p>
+            <p>Sistema de escala inteligente: Quanto maior o volume, menor o custo.</p>
             <div class="badge-promo">Créditos a partir de R$ 8,00 a unidade</div>
-            <p>Pacotes liberados a partir de 10 créditos com ativação imediata no painel.</p>
-            <p>🚀 <i>Consulte nossa tabela de descontos progressivos para grandes volumes (acima de 100 créditos).</i></p>
+            <p>Pacotes liberados a partir de 10 créditos.</p>
             <a href="https://wa.me/5519981316342" class="btn-whatsapp" style="background: var(--gold-neon); color: black;">SOLICITAR TABELA DE PREÇOS</a>
         </div>
 
@@ -147,14 +142,39 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 20px;">
                 <p>✦ Canais em Alta Definição + OTT</p>
                 <p>✦ Créditos acumulativos</p>
-                <p>✦ Banners de programação exclusivos</p>
-                <p>✦ Crie seus próprios assinantes</p>
+                <p>✦ Banners exclusivos</p>
+                <p>✦ Crie seus assinantes</p>
                 <p>✦ DNS para Smart TV</p>
-                <p>✦ Crie seus próprios revendedores</p>
-                <p>✦ Suporte com tutoriais e vídeos</p>
+                <p>✦ Crie seus revendedores</p>
+                <p>✦ Suporte com tutoriais</p>
                 <p>✦ Testes Ilimitados</p>
                 <p>✦ Materiais de divulgação</p>
             </div>
+        </div>
+
+        <div class="tech-info">
+            <div class="tech-card">
+                <h3>O que é OTT?</h3>
+                <p>O Sistema de OTT é voltado ao público que usa TVBOX ou qualquer sistema ANDROID. Garantia de estabilidade superior e anti-travamento.</p>
+            </div>
+            <div class="tech-card">
+                <h3>TV via Internet</h3>
+                <p>Transmissão via rede mundial sem necessidade de antenas. Alta qualidade mesmo em conexões básicas.</p>
+            </div>
+        </div>
+
+        <h2>Planos para Clientes</h2>
+        <div class="grid-planos">
+            <div class="card-plano"><h3>MENSAL</h3><div class="price">R$ 35,00</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano"><h3>TRIMESTRAL</h3><div class="price">R$ 89,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano"><h3>SEMESTRAL</h3><div class="price">R$ 149,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Assinar</a></div>
+            <div class="card-plano" style="border-color: var(--gold-neon);"><h3>ANUAL</h3><div class="price">R$ 199,99</div><a href="https://wa.me/5519981316342" class="btn-whatsapp">Melhor Oferta</a></div>
+        </div>
+
+        <div class="mural-fotos">
+            <img src="https://static.wixstatic.com/media/2313af_3bd052ccff254bbe8bf94e7566f288df~mv2.png" alt="Multi Dispositivos">
+            <img src="https://static.wixstatic.com/media/2313af_cd28e244e54448319b4869dae15fbe73~mv2.webp" alt="App Mobile">
+            <img src="https://static.wixstatic.com/media/2313af_1b386625f5bd4c5196631f1398815408~mv2.png" alt="Smart TV">
         </div>
 
         <h2>Aplicativos Parceiros</h2>
@@ -171,12 +191,26 @@
             <img src="https://imgur.com/Ol3MwzB.png" alt="App Oficial 2">
         </div>
 
+        <h2>Dúvidas Frequentes</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">Como funciona a revenda? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Você adquire créditos antecipados e revende para seus clientes.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Preciso de internet de quantos megas? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Recomendamos 10MB para HD e 25MB para 4K.</div>
+            </div>
+        </div>
+
         <div class="sobre-nos">
             <h2>Sobre o Universo do Entretenimento</h2>
-            <p>Nascemos com a missão de transformar a forma como você consome conteúdo digital. Utilizamos servidores com tecnologia CDN e sistemas OTT para garantir que a sua diversão nunca seja interrompida.</p>
+            <p>Nascemos com a missão de transformar a forma como você consome conteúdo digital. Alta performance e suporte dedicado.</p>
         </div>
 
     </div>
+
+    <div class="footer"><p>&copy; 2026 Universo do Entretenimento - Qualidade Premium</p></div>
 
     <script>
         document.querySelectorAll('.faq-question').forEach(item => {
